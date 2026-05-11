@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <g stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M46,84
+             C32,87 20,80 22,66
+             C12,65 8,50 16,41
+             C14,27 28,17 40,21
+             C45,14 55,14 60,21
+             C72,17 86,27 84,41
+             C92,50 88,65 78,66
+             C80,80 68,87 54,84
+             C51,84 49,84 46,84 Z" />
+
+    <path d="M46,84 C46,90 44,95 40,98" />
+    <path d="M54,84 C54,90 56,95 60,98" />
+    <path d="M38,98 L62,98" />
+
+    <path d="M28,26 Q35,35 42,38" />
+    <circle cx="42" cy="38" r="4" fill="#000000" stroke="none" />
+
+    <path d="M48,20 Q50,28 56,32" />
+    <circle cx="56" cy="32" r="4" fill="#000000" stroke="none" />
+
+    <path d="M76,28 Q65,35 64,45" />
+    <circle cx="64" cy="45" r="4" fill="#000000" stroke="none" />
+
+    <path d="M17,52 Q30,55 34,60" />
+    <circle cx="34" cy="60" r="4" fill="#000000" stroke="none" />
+
+    <path d="M82,52 Q70,55 66,60" />
+    <circle cx="66" cy="60" r="4" fill="#000000" stroke="none" />
+
+    <path d="M32,78 Q42,75 46,68" />
+    <circle cx="46" cy="68" r="4" fill="#000000" stroke="none" />
+
+    <path d="M68,78 Q58,75 54,68" />
+    <circle cx="54" cy="68" r="4" fill="#000000" stroke="none" />
+
+    <path d="M42,38 Q45,45 40,50" />
+    <circle cx="40" cy="50" r="4" fill="#000000" stroke="none" />
+
+    <path d="M64,45 Q55,50 56,56" />
+    <circle cx="56" cy="56" r="4" fill="#000000" stroke="none" />
+  </g>
+</svg>

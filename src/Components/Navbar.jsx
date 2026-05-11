@@ -1,53 +1,37 @@
 import React from 'react';
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo.svg';
+import { Link } from 'react-router';
 
 export default function Navbar() {
     return (
-        <div className='container mx-auto'>
-            <div className="max-lg:collapse bg-base-200 lg:mb-48 shadow-sm w-full rounded-md">
-                <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
-                <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
-                <div className="collapse-title navbar">
-                    <div className="navbar-start">
-                        <label htmlFor="navbar-1-toggle" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <img src={logo} alt="ThinkFlow" className="w-32" />
-                    </div>
-                    <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
-                            <li><button>Item 1</button></li>
-                            <li>
-                                <details>
-                                    <summary>Parent</summary>
-                                    <ul className="p-2 bg-base-100 w-40 z-1">
-                                        <li><button>Submenu 1</button></li>
-                                        <li><button>Submenu 2</button></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li><button>Item 3</button></li>
-                        </ul>
-                    </div>
-                    <div className="navbar-end">
-                        <input type="text" placeholder="Search" className="input input-bordered w-64 lg:w-auto" />
-                    </div>
-                </div>
+        <nav className="w-full bg-linear-to-r from-[#84e7c4] to-[#B5C6E0]">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-14 md:h-16">
 
-                <div className="collapse-content lg:hidden z-1">
-                    <ul className="menu">
-                        <li><button>Item 1</button></li>
-                        <li>
-                            <button>Parent</button>
-                            <ul>
-                                <li><button>Submenu 1</button></li>
-                                <li><button>Submenu 2</button></li>
-                            </ul>
-                        </li>
-                        <li><button>Item 3</button></li>
-                    </ul>
+                    {/* Logo */}
+                    <Link to="/" className="flex items-center gap-2 shrink-0">
+                        <img src={logo} alt="ThinkFlow" className="h-10 w-auto md:h-14 lg:h-20" />
+                    </Link>
+
+                    {/* Buttons */}
+                    <div className="flex items-center gap-2 md:gap-3">
+                        <Link
+                            to="/login"
+                            className="btn btn-xs md:btn-sm bg-black border border-black text-white hover:bg-[#6f7bf7] hover:border-[#6f7bf7] transition-colors"
+                        >
+                            Sign In
+                        </Link>
+                        <Link
+                            to="/register"
+                            className="btn btn-xs md:btn-sm bg-[#6f7bf7]! text-white border-0 hover:bg-[#5a67e8]!"
+                        >
+                            <span className="hidden sm:inline">Get Started</span>
+                            <span className="sm:hidden">Start</span>
+                        </Link>
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </nav>
     );
 }

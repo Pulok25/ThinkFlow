@@ -11,7 +11,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState('false');
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,13 +21,13 @@ export default function Login() {
       setError('Invalid Email & Password')
       return;
     }
-    setLoading('True')
+    setLoading(true)
     try{
       await signInWithEmailAndPassword(auth, email,password);
       navigate('/dashboard');
     } catch(err){
       switch(err.code){
-        case 'User is Not Found':
+        case 'auth/user-not-found':
           setError('This email have no account')
           break;
 

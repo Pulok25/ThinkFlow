@@ -26,16 +26,15 @@ export default function Register() {
       setError('Name not sent');
       return;
     }
+
+    // এই block টা যোগ করো
+    if (method === 'phone') {
+      setError('Phone registration coming soon. Please use email for now.');
+      return;
+    }
+
     if (method === 'email' && !email) {
       setError('Email not sent');
-      return;
-    }
-    if (password.length < 8) {
-      setError('Password atleast 8 character');
-      return;
-    }
-    if (password !== confirm) {
-      setError('Passwords are not the same ');
       return;
     }
 
@@ -94,21 +93,19 @@ export default function Register() {
           <div className="flex bg-white/60 border border-white/80 rounded-xl p-1 mb-6">
             <button
               onClick={() => { setMethod('email'); setError(''); }}
-              className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium font-sans transition-all ${
-                method === 'email'
+              className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium font-sans transition-all ${method === 'email'
                   ? 'bg-[#6f7bf7] text-white shadow-md shadow-[#6f7bf7]/30'
                   : 'text-[#2a4a3a] opacity-60 hover:opacity-90'
-              }`}
+                }`}
             >
               <Mail size={14} /> Email
             </button>
             <button
               onClick={() => { setMethod('phone'); setError(''); }}
-              className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium font-sans transition-all ${
-                method === 'phone'
+              className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium font-sans transition-all ${method === 'phone'
                   ? 'bg-[#6f7bf7] text-white shadow-md shadow-[#6f7bf7]/30'
                   : 'text-[#2a4a3a] opacity-60 hover:opacity-90'
-              }`}
+                }`}
             >
               <Phone size={14} /> Phone
             </button>
@@ -170,7 +167,7 @@ export default function Register() {
                   />
                 </div>
               </div>
-              
+
             </div>
           )}
 
